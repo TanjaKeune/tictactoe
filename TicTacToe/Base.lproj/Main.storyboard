@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UFE-sL-edm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -174,6 +174,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58.125" y="118.30985915492958"/>
+        </scene>
+        <!--Bid View Controller-->
+        <scene sceneID="eAI-PD-GUv">
+            <objects>
+                <viewController id="UFE-sL-edm" customClass="BidViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLl-2d-QY5"/>
+                        <viewControllerLayoutGuide type="bottom" id="lxx-E0-uY8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x7x-8t-9QR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player O:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-ii-Tga">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="77N-dv-fg1"/>
+                                    <constraint firstAttribute="height" constant="21" id="tFY-p2-QaY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-ZD-8Du">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WHw-hr-ndu"/>
+                                    <constraint firstAttribute="width" constant="81" id="yjK-q7-kJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWM-4k-xDB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5hZ-sj-XxC"/>
+                                    <constraint firstAttribute="width" constant="81" id="BWU-qc-VJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9I-Uu-DhC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="93F-2k-aCG"/>
+                                    <constraint firstAttribute="height" constant="21" id="WKA-ZJ-kQT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player O, enter bid:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-35-i2b">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PiN-El-l1A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2Fp-fd-G8d">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sGb-eq-5zL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itF-tg-Sb5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8pP-dp-Qef"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uij-bE-do1"/>
+                                </constraints>
+                                <state key="normal" title="Bid"/>
+                                <connections>
+                                    <action selector="bidButtonPressed:" destination="UFE-sL-edm" eventType="touchUpInside" id="ESX-vm-e5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yDp-35-i2b" firstAttribute="top" secondItem="QLl-2d-QY5" secondAttribute="bottom" constant="100" id="0qI-qo-RYi"/>
+                            <constraint firstItem="yDp-35-i2b" firstAttribute="leading" secondItem="x7x-8t-9QR" secondAttribute="leadingMargin" id="3cp-vF-tez"/>
+                            <constraint firstItem="OZF-ii-Tga" firstAttribute="top" secondItem="QLl-2d-QY5" secondAttribute="bottom" constant="8" id="Iap-Wp-Yfp"/>
+                            <constraint firstItem="cWM-4k-xDB" firstAttribute="top" secondItem="QLl-2d-QY5" secondAttribute="bottom" constant="8" id="Sbk-G6-lea"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Fp-fd-G8d" secondAttribute="trailing" id="USU-Tx-4mn"/>
+                            <constraint firstItem="z9I-Uu-DhC" firstAttribute="trailing" secondItem="x7x-8t-9QR" secondAttribute="trailingMargin" id="WYV-ne-f80"/>
+                            <constraint firstItem="itF-tg-Sb5" firstAttribute="centerX" secondItem="x7x-8t-9QR" secondAttribute="centerX" id="X8J-rj-uZM"/>
+                            <constraint firstItem="2Fp-fd-G8d" firstAttribute="leading" secondItem="x7x-8t-9QR" secondAttribute="leadingMargin" id="c6W-UB-qnG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yDp-35-i2b" secondAttribute="trailing" id="cgL-xs-7Jb"/>
+                            <constraint firstItem="OZF-ii-Tga" firstAttribute="leading" secondItem="x7x-8t-9QR" secondAttribute="leadingMargin" id="iVb-KO-1lv"/>
+                            <constraint firstItem="itF-tg-Sb5" firstAttribute="top" secondItem="2Fp-fd-G8d" secondAttribute="bottom" constant="8" id="kfu-n0-L8O"/>
+                            <constraint firstItem="cWM-4k-xDB" firstAttribute="trailing" secondItem="x7x-8t-9QR" secondAttribute="trailingMargin" id="q5l-U5-LqN"/>
+                            <constraint firstItem="UJX-ZD-8Du" firstAttribute="leading" secondItem="x7x-8t-9QR" secondAttribute="leadingMargin" id="rhH-D6-IXc"/>
+                            <constraint firstItem="UJX-ZD-8Du" firstAttribute="top" secondItem="OZF-ii-Tga" secondAttribute="bottom" constant="8" id="sFb-Jw-vh7"/>
+                            <constraint firstItem="z9I-Uu-DhC" firstAttribute="top" secondItem="cWM-4k-xDB" secondAttribute="bottom" constant="8" id="uZD-c4-OFQ"/>
+                            <constraint firstItem="2Fp-fd-G8d" firstAttribute="top" secondItem="yDp-35-i2b" secondAttribute="bottom" constant="8" id="y44-TP-44B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bid" destination="itF-tg-Sb5" id="FFS-Zz-d8e"/>
+                        <outlet property="bidTextField" destination="2Fp-fd-G8d" id="9aF-3p-JeO"/>
+                        <outlet property="playerOLabel" destination="OZF-ii-Tga" id="lPo-U9-dOs"/>
+                        <outlet property="playerOPoints" destination="UJX-ZD-8Du" id="evY-fG-wia"/>
+                        <outlet property="playerTurnLabel" destination="yDp-35-i2b" id="2vv-b0-ABi"/>
+                        <outlet property="playerXLabel" destination="cWM-4k-xDB" id="gQJ-UL-E9h"/>
+                        <outlet property="playerXPoints" destination="z9I-Uu-DhC" id="7cp-DR-fxV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="play" id="a1k-CI-kb1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qML-yW-uQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.75" y="114.08450704225352"/>
         </scene>
     </scenes>
     <resources>
