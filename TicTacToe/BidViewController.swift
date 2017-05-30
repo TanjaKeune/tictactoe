@@ -108,7 +108,7 @@ class BidViewController: UIViewController {
                         bidTextField.isHidden = true
                         playerO += xBid + oBid
                         //won call segue to the board
-                        performSegue(withIdentifier: "play", sender: self)
+                        performSegue(withIdentifier: "play", sender: 2)
                         
                     } else if xBid == oBid {
                         
@@ -125,7 +125,7 @@ class BidViewController: UIViewController {
                         bidTextField.isHidden = true
                         playerX += xBid + oBid
                         //won call segue to the board
-                        performSegue(withIdentifier: "play", sender: self)
+                        performSegue(withIdentifier: "play", sender: 1)
                         
                     }
                     playerXPoints.text = String(playerX)
@@ -143,4 +143,15 @@ class BidViewController: UIViewController {
     }
     
 }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "play" {
+            
+            if let destination = segue.destination as? ViewController {
+                
+                destination.player = sender as? Int
+            }
+        }
+    }
 }

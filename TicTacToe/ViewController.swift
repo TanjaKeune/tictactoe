@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var winLabel: UILabel!
     
-    var player = 1
+    var player: Int!
     
     var activeGame = true
     
