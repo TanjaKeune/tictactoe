@@ -33,6 +33,8 @@ class BidViewController: UIViewController {
     var oBid = 0
     var sum = 0
     
+    var sendPlayer = 0
+    
     var x = 0 // 0 - didn't place a bid, 1- did placed bid
     
     var o = 0
@@ -108,7 +110,10 @@ class BidViewController: UIViewController {
                         bidTextField.isHidden = true
                         playerO += xBid + oBid
                         //won call segue to the board
-                        performSegue(withIdentifier: "play", sender: 2)
+                        
+                        sendPlayer = 2
+                        print(sendPlayer)
+                        performSegue(withIdentifier: "play", sender: sendPlayer)  //2
                         
                     } else if xBid == oBid {
                         
@@ -125,7 +130,10 @@ class BidViewController: UIViewController {
                         bidTextField.isHidden = true
                         playerX += xBid + oBid
                         //won call segue to the board
-                        performSegue(withIdentifier: "play", sender: 1)
+                        
+                        sendPlayer = 1
+                        print(sendPlayer)
+                        performSegue(withIdentifier: "play", sender: sendPlayer)  //1
                         
                     }
                     playerXPoints.text = String(playerX)
@@ -144,14 +152,14 @@ class BidViewController: UIViewController {
     
 }
     
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject) {
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "play" {
             
-            if let destination = segue.destination as? ViewController {
+            let destination = segue.destination as! ViewController
                 
-                destination.player = (sender as? Int)!
-            }
+            destination.player = sendPlayer
+            
         }
     }
 }

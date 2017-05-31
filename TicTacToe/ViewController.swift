@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var winLabel: UILabel!
     
-    var player = 1
+    var player = Int()
     
     var activeGame = true
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         playAgainButton.isHidden = true
+        print(player)
     }
 
     override func didReceiveMemoryWarning() {
