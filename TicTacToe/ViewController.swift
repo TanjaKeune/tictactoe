@@ -92,7 +92,7 @@ class ViewController: UIViewController {
                 //print(gameState[combination[0]])
             }
         
-        //performSegue(withIdentifier: "goBid", sender: Any?)
+        performSegue(withIdentifier: "goBid", sender: nil)
         }
   
         
