@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var winLabel: UILabel!
     
-    var player: Int!
+    var player = 1
     
     var activeGame = true
     
@@ -36,8 +36,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func ButtonPressed(_ sender: AnyObject) {
-        
-        
         
             let activePosition = sender.tag - 1
         
@@ -93,6 +91,8 @@ class ViewController: UIViewController {
                 }
                 //print(gameState[combination[0]])
             }
+        
+        //performSegue(withIdentifier: "goBid", sender: Any?)
         }
   
         

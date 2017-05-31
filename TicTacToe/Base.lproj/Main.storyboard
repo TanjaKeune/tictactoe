@@ -169,6 +169,7 @@
                     <connections>
                         <outlet property="playAgainButton" destination="zvQ-bm-GFc" id="Ew9-qE-TDj"/>
                         <outlet property="winLabel" destination="UAx-dO-Kc7" id="JF5-3D-5AT"/>
+                        <segue destination="UFE-sL-edm" kind="show" identifier="goBid" id="jHr-YQ-BwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

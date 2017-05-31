@@ -144,13 +144,13 @@ class BidViewController: UIViewController {
     
 }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject) {
         
         if segue.identifier == "play" {
             
             if let destination = segue.destination as? ViewController {
                 
-                destination.player = sender as? Int
+                destination.player = (sender as? Int)!
             }
         }
     }
