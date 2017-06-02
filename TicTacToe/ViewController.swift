@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     
     var player = Int()
     
+    var playerOPoints = Int()
+    
+    var playerXPoints = Int()
+    
     var activeGame = true
     
     var winningCombitnation = [[2, 4, 6], [0,4,8], [0, 1, 2], [0,3,6], [1, 4, 7], [2, 5 , 8], [3, 4, 5], [6, 7, 8]]
@@ -142,6 +146,8 @@ class ViewController: UIViewController {
                 if let destination = navVC.topViewController as? BidViewController {
                     
                     destination.gameStateSaved = gameState
+                    destination.playerX = playerXPoints
+                    destination.playerO = playerOPoints
 
                 }
             }
