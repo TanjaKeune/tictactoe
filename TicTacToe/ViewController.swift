@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var playAgainButton: UIButton!
     
+    @IBOutlet var button: UIButton!
+    
     //1 is noughts, 2 is cross
     
     @IBOutlet var winLabel: UILabel!
@@ -28,7 +30,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         playAgainButton.isHidden = true
-        print(player)
+        
+        // After reopening the view present the played moves
+        
+        for i in 1...9 {
+            
+            //let tmpButton = self.view.viewWithTag(i+1) as? UIButton
+            
+            button = self.view.viewWithTag(i) as! UIButton!
+            if gameState[i-1] == 1 {
+                
+                button.setImage(UIImage(named: "nought.png"), for: [])
+            } else if gameState[i-1] == 2 {
+                button.setImage(UIImage(named: "cross.png"), for: [])
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,7 +108,6 @@ class ViewController: UIViewController {
                 }
                 //print(gameState[combination[0]])
             }
-        
         performSegue(withIdentifier: "goBid", sender: nil)
         }
   
@@ -118,7 +133,26 @@ class ViewController: UIViewController {
         
 
     }
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goBid" {
+            
+            if let navVC = segue.destination as? UINavigationController {
+               
+                if let destination = navVC.topViewController as? BidViewController {
+                    
+                    destination.gameStateSaved = gameState
+
+                }
+            }
+            
+           // let destination = segue.destination as! BidViewController
+            
+            //        }
+    }
+   
+    
     }
     
-
+}
 

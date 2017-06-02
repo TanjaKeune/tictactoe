@@ -33,6 +33,8 @@ class BidViewController: UIViewController {
     var oBid = 0
     var sum = 0
     
+    var gameStateSaved = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
     var sendPlayer = 0
     
     var x = 0 // 0 - didn't place a bid, 1- did placed bid
@@ -45,7 +47,7 @@ class BidViewController: UIViewController {
         playerTurnLabel.text = "Player Noughts turn. Make your bid:"
         playerOPoints.text = String(playerO)
         playerXPoints.text = String(playerX)
-        
+        print(gameStateSaved)
     }
 
     override func didReceiveMemoryWarning() {
@@ -159,7 +161,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destination = segue.destination as! ViewController
                 
             destination.player = sendPlayer
-            
+            destination.gameState = gameStateSaved
         }
     }
 }

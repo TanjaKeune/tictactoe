@@ -167,6 +167,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="Owf-FK-H7K" id="G8k-UY-Rn8"/>
                         <outlet property="playAgainButton" destination="zvQ-bm-GFc" id="Ew9-qE-TDj"/>
                         <outlet property="winLabel" destination="UAx-dO-Kc7" id="JF5-3D-5AT"/>
                         <segue destination="PtB-Md-et8" kind="show" identifier="goBid" id="jHr-YQ-BwT"/>
