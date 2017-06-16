@@ -136,6 +136,14 @@
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbE-yM-gmD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-oe-GOV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aZc-vW-QtI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -149,6 +157,7 @@
                             <constraint firstItem="VPX-xB-wjL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cvy-Tp-JdS"/>
                             <constraint firstItem="PHy-aq-Lni" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Io4-9L-wPN"/>
                             <constraint firstItem="ipU-pP-uld" firstAttribute="leading" secondItem="fFH-9S-HM4" secondAttribute="trailing" constant="21" id="J4L-Gd-YVl"/>
+                            <constraint firstItem="pzx-oe-GOV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="KVb-gr-evb"/>
                             <constraint firstItem="Owf-FK-H7K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L7U-OI-Z4U"/>
                             <constraint firstItem="yfV-zs-zne" firstAttribute="top" secondItem="9Op-5r-KOR" secondAttribute="bottom" constant="32" id="Ltz-YR-zgt"/>
                             <constraint firstItem="UAx-dO-Kc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N1o-MH-d6z"/>
@@ -158,9 +167,11 @@
                             <constraint firstItem="yfV-zs-zne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDc-Zd-4hX"/>
                             <constraint firstItem="PHy-aq-Lni" firstAttribute="top" secondItem="z3U-kQ-Giy" secondAttribute="bottom" constant="38" id="TEI-3H-PnI"/>
                             <constraint firstItem="q2Z-Jy-0P1" firstAttribute="top" secondItem="PHy-aq-Lni" secondAttribute="bottom" constant="32" id="Tci-Jw-Kde"/>
+                            <constraint firstItem="ipU-pP-uld" firstAttribute="top" secondItem="pzx-oe-GOV" secondAttribute="bottom" constant="10" id="alZ-XB-GSF"/>
                             <constraint firstItem="zvQ-bm-GFc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bRr-tq-CZd"/>
                             <constraint firstItem="PHy-aq-Lni" firstAttribute="leading" secondItem="9Op-5r-KOR" secondAttribute="trailing" constant="28" id="cTv-Gh-RDV"/>
                             <constraint firstItem="yfV-zs-zne" firstAttribute="leading" secondItem="dHG-Le-ugq" secondAttribute="trailing" constant="21" id="g4R-9S-tYu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pzx-oe-GOV" secondAttribute="trailing" constant="20" id="sfg-U8-BAY"/>
                             <constraint firstItem="z3U-kQ-Giy" firstAttribute="leading" secondItem="ipU-pP-uld" secondAttribute="trailing" constant="28" id="vF8-YJ-Wzp"/>
                             <constraint firstItem="UAx-dO-Kc7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vzY-4Q-wYl"/>
                             <constraint firstItem="dHG-Le-ugq" firstAttribute="top" secondItem="Owf-FK-H7K" secondAttribute="bottom" constant="32.5" id="wdX-US-fQ1"/>
@@ -168,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="Owf-FK-H7K" id="G8k-UY-Rn8"/>
+                        <outlet property="labelPlayersTurn" destination="pzx-oe-GOV" id="Zae-7I-2Sm"/>
                         <outlet property="playAgainButton" destination="zvQ-bm-GFc" id="Ew9-qE-TDj"/>
                         <outlet property="winLabel" destination="UAx-dO-Kc7" id="JF5-3D-5AT"/>
                         <segue destination="PtB-Md-et8" kind="show" identifier="goBid" id="jHr-YQ-BwT"/>

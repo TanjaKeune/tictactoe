@@ -44,7 +44,7 @@ class BidViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerTurnLabel.text = "Player Noughts turn. Make your bid:"
+        playerTurnLabel.text = "Player O turn. Make your bid:"
         playerOPoints.text = String(playerO)
         playerXPoints.text = String(playerX)
         print(gameStateSaved)
@@ -73,7 +73,7 @@ class BidViewController: UIViewController {
                 o = 1
                 
                 playerTurnLabel.textColor = UIColor.red
-                playerTurnLabel.text = "Plaer Crosses turn. Make your bid:"
+                playerTurnLabel.text = "Player X turn. Make your bid:"
                 bidTextField.text = ""
                 
                 activePlayer = 2

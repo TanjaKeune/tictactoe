@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var button: UIButton!
     
+    @IBOutlet var labelPlayersTurn: UILabel!
+    
     //1 is noughts, 2 is cross
     
     @IBOutlet var winLabel: UILabel!
@@ -35,7 +37,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         playAgainButton.isHidden = true
         
+        //hides the navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+        
         // After reopening the view present the played moves
+        if player == 2 {
+            labelPlayersTurn.text = "Crosses turn."
+        } else {
+            labelPlayersTurn.text = "Noughts turn."
+        }
         
         for i in 1...9 {
             
@@ -90,7 +101,7 @@ class ViewController: UIViewController {
                 winLabel.isHidden = false
                 switch gameState[combination[0]] {
                 case 1:
-                    self.winLabel.text = "Player O Won!"
+                    self.winLabel.text = "Player O Won!"         //call alert here and ask if they want to play again. resset points. 
                 case 2:
                     self.winLabel.text = "Player X Won!"
                 default:
@@ -151,14 +162,12 @@ class ViewController: UIViewController {
 
                 }
             }
-            
-           // let destination = segue.destination as! BidViewController
-            
-            //        }
     }
    
     
     }
+    
+    
     
 }
 

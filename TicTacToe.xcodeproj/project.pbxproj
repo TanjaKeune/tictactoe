@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B290E111EF35ED8008A3646 /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B290E101EF35ED8008A3646 /* launchScreen.png */; };
 		9B76716F1EDC793100A0CED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B76716E1EDC793100A0CED0 /* AppDelegate.swift */; };
 		9B7671711EDC793100A0CED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7671701EDC793100A0CED0 /* ViewController.swift */; };
 		9B7671741EDC793100A0CED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7671721EDC793100A0CED0 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B290E101EF35ED8008A3646 /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
 		9B76716B1EDC793100A0CED0 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B76716E1EDC793100A0CED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7671701EDC793100A0CED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				9B7671801EDC79C300A0CED0 /* board.png */,
 				9B7671811EDC79C300A0CED0 /* cross.png */,
 				9B7671821EDC79C300A0CED0 /* nought.png */,
+				9B290E101EF35ED8008A3646 /* launchScreen.png */,
 				9B7671721EDC793100A0CED0 /* Main.storyboard */,
 				9B7671751EDC793100A0CED0 /* Assets.xcassets */,
 				9B7671771EDC793100A0CED0 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 				9B7671841EDC79C300A0CED0 /* cross.png in Resources */,
 				9B7671831EDC79C300A0CED0 /* board.png in Resources */,
 				9B7671851EDC79C300A0CED0 /* nought.png in Resources */,
+				9B290E111EF35ED8008A3646 /* launchScreen.png in Resources */,
 				9B7671791EDC793100A0CED0 /* LaunchScreen.storyboard in Resources */,
 				9B7671761EDC793100A0CED0 /* Assets.xcassets in Resources */,
 				9B7671741EDC793100A0CED0 /* Main.storyboard in Resources */,
@@ -316,6 +320,7 @@
 				9B76717F1EDC793100A0CED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
