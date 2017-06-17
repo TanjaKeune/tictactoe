@@ -41,7 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 227.0/255.0, green: 220.0/255.0, blue: 194.0/255.0, alpha: 1.0 )
+    }
+    
 
 }
 

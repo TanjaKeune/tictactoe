@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     var playerXPoints = Int()
     
+    @IBOutlet var logoView: UIImageView!
+    
     var activeGame = true
     
     var winningCombitnation = [[2, 4, 6], [0,4,8], [0, 1, 2], [0,3,6], [1, 4, 7], [2, 5 , 8], [3, 4, 5], [6, 7, 8]]
@@ -39,8 +41,10 @@ class ViewController: UIViewController {
         
         //hides the navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         
+        //sets background color on view controller
+        self.view.backgroundColor = UIColor(red: 245.0/255.0, green: 233.0/255.0, blue: 200.0/255.0, alpha: 1.0)
+
         // After reopening the view present the played moves
         if player == 2 {
             labelPlayersTurn.text = "Crosses turn."
@@ -60,6 +64,8 @@ class ViewController: UIViewController {
                 button.setImage(UIImage(named: "cross.png"), for: [])
             }
         }
+        
+        logoView.image = UIImage(named: "smallerBidLogo.png")
     }
 
     override func didReceiveMemoryWarning() {

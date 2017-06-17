@@ -48,6 +48,25 @@ class BidViewController: UIViewController {
         playerOPoints.text = String(playerO)
         playerXPoints.text = String(playerX)
         print(gameStateSaved)
+        
+        //put a logo on navigation bar
+        
+        let logo = UIImage(named: "smallerBidLogo.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+        
+        //set color to navigation bar
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 79.0/255.0, green: 147.0/255.0, blue: 218.0/255.0, alpha: 1.0 )
+        
+        //set background color to view
+        
+        self.view.backgroundColor = UIColor(red: 245.0/255.0, green: 233.0/255.0, blue: 200.0/255.0, alpha: 1.0)
+        //puts a navigation background image but has to be right size
+        
+      //  self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navi1.png"), for: .default)
+      //  self.navigationController?.navigationBar.clipsToBounds = true
+      
     }
 
     override func didReceiveMemoryWarning() {

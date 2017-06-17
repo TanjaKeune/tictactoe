@@ -30,7 +30,6 @@
                                     <constraint firstAttribute="height" constant="88" id="P7H-Sb-lLc"/>
                                     <constraint firstAttribute="width" constant="89" id="eQy-Wg-wIR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C1Y-13-fTP"/>
                                 </connections>
@@ -40,7 +39,6 @@
                                     <constraint firstAttribute="width" constant="89" id="a42-qS-aI8"/>
                                     <constraint firstAttribute="height" constant="88" id="zZ9-oa-Qni"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xr5-5e-ysx"/>
                                 </connections>
@@ -50,7 +48,6 @@
                                     <constraint firstAttribute="height" constant="88" id="NMA-NS-4tt"/>
                                     <constraint firstAttribute="width" constant="89" id="ZzK-Tu-Gf8"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0a-xG-ajy"/>
                                 </connections>
@@ -60,7 +57,6 @@
                                     <constraint firstAttribute="width" constant="89" id="ha9-fz-Maj"/>
                                     <constraint firstAttribute="height" constant="88" id="pGk-97-5VS"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8f-3U-PPF"/>
                                 </connections>
@@ -70,7 +66,6 @@
                                     <constraint firstAttribute="width" constant="89" id="K23-N0-gVY"/>
                                     <constraint firstAttribute="height" constant="88" id="LPP-Dj-0sC"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwl-cG-MxI"/>
                                 </connections>
@@ -80,7 +75,6 @@
                                     <constraint firstAttribute="height" constant="88" id="5hF-kx-2b6"/>
                                     <constraint firstAttribute="width" constant="89" id="Xg0-ci-Htr"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Wa-fx-ii1"/>
                                 </connections>
@@ -90,7 +84,6 @@
                                     <constraint firstAttribute="width" constant="89" id="Hoy-Pw-ZKC"/>
                                     <constraint firstAttribute="height" constant="88" id="byK-NB-hoP"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mb5-Cm-egJ"/>
                                 </connections>
@@ -100,7 +93,6 @@
                                     <constraint firstAttribute="height" constant="88" id="JVH-Xt-xc7"/>
                                     <constraint firstAttribute="width" constant="89" id="h7E-Hg-ZaY"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHG-dD-5MX"/>
                                 </connections>
@@ -110,7 +102,6 @@
                                     <constraint firstAttribute="width" constant="89" id="66d-0k-LCS"/>
                                     <constraint firstAttribute="height" constant="88" id="THB-nB-5Ms"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8W-UC-LMJ"/>
                                 </connections>
@@ -144,6 +135,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rt9-eY-txK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="c3O-Kh-Ia8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -155,6 +151,7 @@
                             <constraint firstItem="Owf-FK-H7K" firstAttribute="top" secondItem="fFH-9S-HM4" secondAttribute="bottom" constant="38" id="9dU-Vw-GSa"/>
                             <constraint firstItem="ipU-pP-uld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CjF-2w-ipm"/>
                             <constraint firstItem="VPX-xB-wjL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cvy-Tp-JdS"/>
+                            <constraint firstItem="Rt9-eY-txK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="HsO-zf-a7s"/>
                             <constraint firstItem="PHy-aq-Lni" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Io4-9L-wPN"/>
                             <constraint firstItem="ipU-pP-uld" firstAttribute="leading" secondItem="fFH-9S-HM4" secondAttribute="trailing" constant="21" id="J4L-Gd-YVl"/>
                             <constraint firstItem="pzx-oe-GOV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="KVb-gr-evb"/>
@@ -170,9 +167,11 @@
                             <constraint firstItem="ipU-pP-uld" firstAttribute="top" secondItem="pzx-oe-GOV" secondAttribute="bottom" constant="10" id="alZ-XB-GSF"/>
                             <constraint firstItem="zvQ-bm-GFc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bRr-tq-CZd"/>
                             <constraint firstItem="PHy-aq-Lni" firstAttribute="leading" secondItem="9Op-5r-KOR" secondAttribute="trailing" constant="28" id="cTv-Gh-RDV"/>
+                            <constraint firstItem="pzx-oe-GOV" firstAttribute="top" secondItem="Rt9-eY-txK" secondAttribute="bottom" constant="8" id="eod-QS-Gee"/>
                             <constraint firstItem="yfV-zs-zne" firstAttribute="leading" secondItem="dHG-Le-ugq" secondAttribute="trailing" constant="21" id="g4R-9S-tYu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pzx-oe-GOV" secondAttribute="trailing" constant="20" id="sfg-U8-BAY"/>
                             <constraint firstItem="z3U-kQ-Giy" firstAttribute="leading" secondItem="ipU-pP-uld" secondAttribute="trailing" constant="28" id="vF8-YJ-Wzp"/>
+                            <constraint firstItem="Rt9-eY-txK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGq-u9-UAh"/>
                             <constraint firstItem="UAx-dO-Kc7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vzY-4Q-wYl"/>
                             <constraint firstItem="dHG-Le-ugq" firstAttribute="top" secondItem="Owf-FK-H7K" secondAttribute="bottom" constant="32.5" id="wdX-US-fQ1"/>
                         </constraints>
@@ -180,6 +179,7 @@
                     <connections>
                         <outlet property="button" destination="Owf-FK-H7K" id="G8k-UY-Rn8"/>
                         <outlet property="labelPlayersTurn" destination="pzx-oe-GOV" id="Zae-7I-2Sm"/>
+                        <outlet property="logoView" destination="Rt9-eY-txK" id="0id-G0-TKV"/>
                         <outlet property="playAgainButton" destination="zvQ-bm-GFc" id="Ew9-qE-TDj"/>
                         <outlet property="winLabel" destination="UAx-dO-Kc7" id="JF5-3D-5AT"/>
                         <segue destination="PtB-Md-et8" kind="show" identifier="goBid" id="jHr-YQ-BwT"/>
