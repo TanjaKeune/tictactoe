@@ -12,22 +12,25 @@ class BidViewController: UIViewController {
 
     @IBOutlet var bidTextField: UITextField!
     
-    @IBOutlet var playerTurnLabel: UILabel!
-    
     @IBOutlet var playerOLabel: UILabel!
     
     @IBOutlet var playerOPoints: UILabel!
-    
-    @IBOutlet var playerXLabel: UILabel!
     
     @IBOutlet var playerXPoints: UILabel!
     
     @IBOutlet var bid: UIButton!
     
+    @IBOutlet var playerTurnImage: UIImageView!
+    
+    @IBOutlet var PlayerOImage: UIImageView!
+    @IBOutlet var PlayerXImage: UIImageView!
+    
     var activePlayer = 1 // 1 - noughts, 2 - crosses
     
     var playerX = 100
     var playerO = 100
+    
+    var resetCredits = false
     
     var xBid = 0
     var oBid = 0
@@ -44,11 +47,21 @@ class BidViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerTurnLabel.text = "Player O turn. Make your bid:"
+        //playerTurnLabel.text = "Player O turn. Make your bid:"
+        playerTurnImage.image = UIImage(named: "PlayerOTurn.png")
+       
+        print(gameStateSaved)
+        if resetCredits == true {
+            playerX = 100
+            playerO = 100
+        }
+        
         playerOPoints.text = String(playerO)
         playerXPoints.text = String(playerX)
-        print(gameStateSaved)
         
+        
+        PlayerOImage.image = UIImage(named: "NoughtsPlayerLabel.png")
+        PlayerXImage.image = UIImage(named: "CrossesPlayerLabel.png")
         //put a logo on navigation bar
         
         let logo = UIImage(named: "smallerBidLogo.png")
@@ -64,9 +77,6 @@ class BidViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 245.0/255.0, green: 233.0/255.0, blue: 200.0/255.0, alpha: 1.0)
         //puts a navigation background image but has to be right size
         
-      //  self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navi1.png"), for: .default)
-      //  self.navigationController?.navigationBar.clipsToBounds = true
-      
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,9 +86,10 @@ class BidViewController: UIViewController {
     
     @IBAction func bidButtonPressed(_ sender: AnyObject) {
       
+        
+        
         let bidCurrent = Int(bidTextField.text!)!
-        
-        
+ 
         if activePlayer == 1 {
         
             //is noughts player
@@ -91,15 +102,17 @@ class BidViewController: UIViewController {
                 
                 o = 1
                 
-                playerTurnLabel.textColor = UIColor.red
-                playerTurnLabel.text = "Player X turn. Make your bid:"
-                bidTextField.text = ""
+               // playerTurnLabel.textColor = UIColor.red
+               // playerTurnLabel.text = "Player X turn. Make your bid:"
                 
+                playerTurnImage.image = UIImage(named: "PlayerXTurn.png")
+                bidTextField.text = ""
                 activePlayer = 2
                 
             } else {
                 
-                playerTurnLabel.text = "Not suffisant funds, you have \(playerO) pints."
+                //message "Not suffisant funds, you have \(playerO) pints."
+                self.alertMessageOk(title: "Don't have enugh credits.", message: "Please check you credits and bid again.")
             }
             
       } else {
@@ -119,7 +132,7 @@ class BidViewController: UIViewController {
                 activePlayer = 1
 
                 // check who won
-                
+                //
                 if o == 1 && x == 1 {
                     
                     o = 0
@@ -127,7 +140,7 @@ class BidViewController: UIViewController {
                     
                     if xBid > oBid {
                         
-                        playerTurnLabel.text = "Player X turn!"
+                        playerTurnImage.image = UIImage(named: "PlayerXTurn.png")
                         bidTextField.isHidden = true
                         playerO += xBid + oBid
                         //won call segue to the board
@@ -138,16 +151,16 @@ class BidViewController: UIViewController {
                         
                     } else if xBid == oBid {
                         
-                        print("Try again")
+                        //add alert to tell them they had equal bids so they should go again
+                        
                         playerX += xBid
                         playerO += oBid
-                        playerTurnLabel.textColor = UIColor.black
-                        playerTurnLabel.text = "Plaer Noughts turn. Make your bid:"
+                        playerTurnImage.image = UIImage(named: "PlayerOTurn.png")
                         bidTextField.text = ""
                         
                     } else {
                         
-                        playerTurnLabel.text = "Player O turn!"
+                        playerTurnImage.image = UIImage(named: "checkPoints.png")
                         bidTextField.isHidden = true
                         playerX += xBid + oBid
                         //won call segue to the board
@@ -161,16 +174,25 @@ class BidViewController: UIViewController {
                     playerOPoints.text = String(playerO)
                     bidTextField.isHidden = false
 
-            } else {
-                
-                playerTurnLabel.text = "Not suffisant funds, you have \(playerX) pints."
+                }
             }
             
-        }
+            else {
+                
+                    self.alertMessageOk(title: "Don't have enugh credits for the bid", message: "Please check you credits and place new bid")
+
+            }
+            
+        
     
     
     }
-    
+    /*    } else {
+            //call alert to tell them to enter number
+            
+            self.alertMessageOk(title: "Please input you bid", message: "Ready to continue?")
+        }
+    */
 }
     
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

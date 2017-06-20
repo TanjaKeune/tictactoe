@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     var playerXPoints = Int()
     
+    var resetCredits = false
+    
     @IBOutlet var logoView: UIImageView!
     
     var activeGame = true
@@ -107,12 +109,20 @@ class ViewController: UIViewController {
                 winLabel.isHidden = false
                 switch gameState[combination[0]] {
                 case 1:
-                    self.winLabel.text = "Player O Won!"         //call alert here and ask if they want to play again. resset points. 
+                   // self.winLabel.text = "Player O Won!"
+                    self.alertMessageOk(title: "Player O Won!", message: "Play again?")
+                //call alert here and ask if they want to play again. resset points.
                 case 2:
-                    self.winLabel.text = "Player X Won!"
+                   // self.winLabel.text = "Player X Won!"
+                    self.alertMessageOk(title: "Player X Won", message: "Play Again?")
                 default:
                     return
                 }
+                
+                //clean the board and
+                resetCredits = true
+                gameState = [Int](repeatElement(0, count: 9))
+                
             } else {
                     var tie = true
                     for state in gameState {
@@ -165,7 +175,8 @@ class ViewController: UIViewController {
                     destination.gameStateSaved = gameState
                     destination.playerX = playerXPoints
                     destination.playerO = playerOPoints
-
+                    destination.resetCredits = resetCredits
+                    
                 }
             }
     }
