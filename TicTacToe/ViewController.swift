@@ -132,8 +132,9 @@ class ViewController: UIViewController {
                     }
                     if tie == true {
                         self.activeGame = false
-                        self.winLabel.isHidden = false
-                        self.winLabel.text = "This game is tied!"
+//self.winLabel.isHidden = false
+                        self.alertMessageOk(title: "This game is tied", message: "Try again")
+                        //self.winLabel.text = "This game is tied!"
                         self.playAgainButton.isHidden = false
                     }
                 }
