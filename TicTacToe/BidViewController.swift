@@ -44,6 +44,8 @@ class BidViewController: UIViewController {
     
     var o = 0
     
+    var showAd = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

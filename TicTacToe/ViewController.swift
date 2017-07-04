@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     
     //1 is noughts, 2 is cross
     
-    @IBOutlet var winLabel: UILabel!
-    
     var player = Int()
+    
+    var showAd = false
     
     var playerOPoints = Int()
     
@@ -104,16 +104,16 @@ class ViewController: UIViewController {
             if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
             
                 // we have a winner
+                showAd = true
                 activeGame = false
                 playAgainButton.isHidden = false
-                winLabel.isHidden = false
                 switch gameState[combination[0]] {
                 case 1:
-                   // self.winLabel.text = "Player O Won!"
                     self.alertMessageOk(title: "Player O Won!", message: "Play again?")
+                    self.labelPlayersTurn.text = "Player O Won"
                 //call alert here and ask if they want to play again. resset points.
                 case 2:
-                   // self.winLabel.text = "Player X Won!"
+                    self.labelPlayersTurn.text = "Player X Won"
                     self.alertMessageOk(title: "Player X Won", message: "Play Again?")
                 default:
                     return
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
                 //clean the board and
                 resetCredits = true
                 gameState = [Int](repeatElement(0, count: 9))
-                
+
             } else {
                     var tie = true
                     for state in gameState {
@@ -131,16 +131,18 @@ class ViewController: UIViewController {
                         }
                     }
                     if tie == true {
+                        self.showAd = true
                         self.activeGame = false
-//self.winLabel.isHidden = false
                         self.alertMessageOk(title: "This game is tied", message: "Try again")
                         //self.winLabel.text = "This game is tied!"
                         self.playAgainButton.isHidden = false
                     }
                 }
-                //print(gameState[combination[0]])
+
             }
+        
         performSegue(withIdentifier: "goBid", sender: nil)
+
         }
   
         
@@ -160,7 +162,6 @@ class ViewController: UIViewController {
             }
             
         }
-        winLabel.isHidden = true
         playAgainButton.isHidden = true
         
 
@@ -177,6 +178,7 @@ class ViewController: UIViewController {
                     destination.playerX = playerXPoints
                     destination.playerO = playerOPoints
                     destination.resetCredits = resetCredits
+                    destination.showAd = showAd
                     
                 }
             }
